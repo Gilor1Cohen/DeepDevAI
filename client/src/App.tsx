@@ -1,7 +1,16 @@
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import AuthenticatedRoute from "./components/routes/AuthenticatedRoute";
+import GuestRoute from "./components/routes/GuestRoute";
 
 function App() {
-  return <></>;
+  const auth: boolean = false;
+
+  return (
+    <BrowserRouter>
+      {auth ? <AuthenticatedRoute /> : <GuestRoute />}
+    </BrowserRouter>
+  );
 }
 
 export default App;

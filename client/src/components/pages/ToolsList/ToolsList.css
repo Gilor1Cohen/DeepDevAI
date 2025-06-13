@@ -1,0 +1,25 @@
+#ToolsListPage {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#ToolsListPage #ToolsListPage-h {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+#ToolArea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  #ToolArea {
+    grid-template-columns: 1fr;
+  }
+}
