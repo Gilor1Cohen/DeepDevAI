@@ -1,6 +1,7 @@
 export interface btnProps {
   text: string;
-  link: string;
+  type: "submit" | "reset" | "button";
+  isDisabled: boolean;
 }
 
 export interface FAQItemProps {
@@ -9,4 +10,8 @@ export interface FAQItemProps {
   answer: string;
   isOpen: boolean;
   onToggle: (i: number) => void;
+}
+
+export interface ErrorMessageProps {
+  error: string;
 }

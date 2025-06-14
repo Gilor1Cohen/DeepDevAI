@@ -9,6 +9,7 @@ import Btn from "../../ui/btn/Btn";
 import FAQItem from "../../ui/FAQItem/FAQItem";
 
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   const [openId, setOpenId] = useState<number | null>(null);
@@ -27,7 +28,9 @@ export default function LandingPage() {
           - right when you need it.
         </p>
 
-        <Btn text={"Get Started"} link={"/SignUp"} />
+        <Link to={"/SignUp"}>
+          <Btn text={"Get Started"} type={"button"} isDisabled={false} />
+        </Link>
       </article>
 
       <article id="tools-article">

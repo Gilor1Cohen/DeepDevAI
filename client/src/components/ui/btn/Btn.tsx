@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
 import "./Btn.css";
 import type { btnProps } from "../../../types/ui.types";
 
-export default function Btn({ text, link }: btnProps) {
+export default function Btn({ text, type, isDisabled }: btnProps) {
   return (
-    <Link id="Btn-link" to={link}>
-      <button id="Btn">{text}</button>
-    </Link>
+    <button id="Btn" type={type} disabled={isDisabled}>
+      {text}
+    </button>
   );
 }

@@ -1,0 +1,6 @@
+#BackBtnWrapper {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+}
