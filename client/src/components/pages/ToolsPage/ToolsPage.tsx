@@ -1,3 +1,9 @@
+import BackBtn from "../../ui/BackBtn/BackBtn";
+
 export default function ToolsPage() {
-  return <div></div>;
+  return (
+    <section id="ToolsPage">
+      <BackBtn />
+    </section>
+  );
 }

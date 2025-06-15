@@ -1,3 +1,65 @@
+#LandingPage-Nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  height: 70px;
+  padding: 0 2rem;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+#LandingPage-Nav #logo h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#LandingPage-Nav #shortcuts {
+  display: flex;
+  gap: 2rem;
+}
+
+#LandingPage-Nav #shortcuts a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#LandingPage-Nav #shortcuts a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #1abc9c;
+  transition: width 0.3s ease-in-out;
+}
+
+#LandingPage-Nav #shortcuts a:hover,
+#LandingPage-Nav #shortcuts a:focus {
+  color: #fff;
+}
+
+#LandingPage-Nav #shortcuts a:hover::after,
+#LandingPage-Nav #shortcuts a:focus::after {
+  width: 100%;
+}
+
+#LandingPage-Nav #btns {
+  display: flex;
+  gap: 1rem;
+}
+
 #LandingPage {
   width: 100%;
   min-height: 100vh;
@@ -93,17 +155,92 @@
   }
 }
 
-.faq {
+#HowArticle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+#HowArticle h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0;
+}
+
+#HowArticle .steps {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#HowArticle .step {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+#HowArticle .step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #d2d2d7;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 20px;
+}
+
+#HowArticle .step h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0 0 12px;
+}
+
+#HowArticle .step p {
+  font-size: 1rem;
+  color: #3a3a3c;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#faq {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem 0;
+}
+
+#faq h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#LandingPage {
+  padding-top: 70px;
+}
+
+#tools-article,
+#hero-article,
+#faq {
+  scroll-margin-top: 70px;
 }
 
 @media (max-width: 1024px) {
   #hero-article,
   #tools-article,
-  .faq {
+  #faq {
     width: 1024px;
     min-height: 100vh;
     padding: 0 1rem;
@@ -118,7 +255,7 @@
 @media (max-width: 768px) {
   #hero-article,
   #tools-article,
-  .faq {
+  #faq {
     width: 768px;
     min-height: 100vh;
     padding: 0 1rem;
@@ -127,5 +264,11 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+  }
+
+  #LandingPage-Nav {
+    width: 97%;
+    height: 50px;
+    padding: 0 1rem;
   }
 }
