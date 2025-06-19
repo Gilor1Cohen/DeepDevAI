@@ -105,7 +105,7 @@ DB_NAME=DeepDevAI
 ```bash
 
 cd server
-npm nodemon index
+nodemon index
 
 ```
 
