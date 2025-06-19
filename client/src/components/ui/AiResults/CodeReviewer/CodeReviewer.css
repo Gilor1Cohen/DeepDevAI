@@ -1,0 +1,233 @@
+#CodeReviewer {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  color: #202124;
+  background-color: #f1f3f4;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+#CodeReviewer header.summary,
+#CodeReviewer section {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.15), 0 1px 2px rgba(60, 64, 67, 0.15);
+  margin-bottom: 24px;
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+#CodeReviewer header.summary:hover,
+#CodeReviewer section:hover {
+  box-shadow: 0 3px 6px rgba(60, 64, 67, 0.15), 0 3px 6px rgba(60, 64, 67, 0.15);
+}
+
+#CodeReviewer h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 16px;
+  color: #1a73e8;
+}
+
+#CodeReviewer h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 8px;
+  color: #202124;
+}
+
+#CodeReviewer p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 8px;
+  color: #5f6368;
+}
+
+#CodeReviewer strong {
+  color: #202124;
+  font-weight: 500;
+}
+
+#CodeReviewer pre {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 0;
+}
+
+#CodeReviewer code {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  color: #202124;
+}
+
+#CodeReviewer ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 16px;
+}
+
+#CodeReviewer li {
+  margin-bottom: 8px;
+  color: #5f6368;
+}
+
+#CodeReviewer .overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+#CodeReviewer .overview p {
+  margin: 0;
+  color: #202124;
+}
+
+.CopyBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  background-color: #4285f4;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  #CodeReviewer {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  #CodeReviewer header.summary,
+  #CodeReviewer section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  #CodeReviewer h1 {
+    font-size: 1.4rem;
+  }
+
+  #CodeReviewer h2 {
+    font-size: 1.15rem;
+  }
+
+  #CodeReviewer p,
+  #CodeReviewer li {
+    font-size: 0.95rem;
+  }
+
+  #CodeReviewer pre {
+    padding: 14px;
+  }
+
+  #CodeReviewer .overview {
+    gap: 14px;
+  }
+
+  .CopyBtn {
+    height: 34px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #CodeReviewer {
+    padding: 16px;
+    margin: 0 8px;
+  }
+
+  #CodeReviewer header.summary,
+  #CodeReviewer section {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  #CodeReviewer h1 {
+    font-size: 1.3rem;
+  }
+
+  #CodeReviewer h2 {
+    font-size: 1.1rem;
+  }
+
+  #CodeReviewer p,
+  #CodeReviewer li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  #CodeReviewer pre {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+
+  #CodeReviewer .overview {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .CopyBtn {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #CodeReviewer {
+    padding: 12px;
+  }
+
+  #CodeReviewer header.summary,
+  #CodeReviewer section {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  #CodeReviewer h1 {
+    font-size: 1.2rem;
+  }
+
+  #CodeReviewer h2 {
+    font-size: 1rem;
+  }
+
+  #CodeReviewer p,
+  #CodeReviewer li {
+    font-size: 0.85rem;
+  }
+
+  #CodeReviewer pre {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  #CodeReviewer .overview {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .CopyBtn {
+    height: 30px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+}

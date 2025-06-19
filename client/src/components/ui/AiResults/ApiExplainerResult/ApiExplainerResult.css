@@ -1,0 +1,169 @@
+.ApiExplainerResult {
+  background: #ffffff;
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ApiExplainerResult .apiName {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 8px;
+}
+
+.ApiExplainerResult .overview {
+  font-size: 16px;
+  color: #606060;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.ApiExplainerResult section {
+  margin-top: 24px;
+}
+
+.ApiExplainerResult section h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #007aff;
+  border-bottom: 2px solid #007aff;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+
+.ApiExplainerResult .endpoint {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ApiExplainerResult .endpoint:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.ApiExplainerResult .endpoint header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ApiExplainerResult .endpoint header code {
+  background: #f0f0f0;
+  color: #007aff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.ApiExplainerResult .endpoint header span {
+  font-weight: 500;
+  font-size: 16px;
+  color: #111111;
+}
+
+.ApiExplainerResult .endpoint p {
+  font-size: 16px;
+  color: #333333;
+  margin: 8px 0 16px;
+  line-height: 1.5;
+}
+
+.ApiExplainerResult .exampleRequest,
+.ApiExplainerResult .exampleResponse {
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+
+.ApiExplainerResult .exampleRequest {
+  border-left: 4px solid #007aff;
+}
+
+.ApiExplainerResult .exampleResponse {
+  border-left: 4px solid #8e8e93;
+}
+
+.ApiExplainerResult .parameters ul,
+.ApiExplainerResult .errors ul {
+  list-style: none;
+  padding-left: 16px;
+  margin: 8px 0 0;
+}
+
+.ApiExplainerResult .parameters li,
+.ApiExplainerResult .errors li {
+  margin-bottom: 12px;
+  padding-left: 8px;
+  position: relative;
+}
+
+.ApiExplainerResult .parameters li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007aff;
+}
+
+.ApiExplainerResult .parameters li strong {
+  color: #007aff;
+}
+
+.ApiExplainerResult .parameters li em {
+  color: #606060;
+  font-style: italic;
+}
+
+.ApiExplainerResult .parameters li .required {
+  color: #dd4a48;
+  margin-left: 4px;
+}
+
+.ApiExplainerResult .errors li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ApiExplainerResult .errors li code {
+  background: #f0f0f0;
+  color: #dd4a48;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .ApiExplainerResult {
+    padding: 16px;
+    margin: 16px auto;
+  }
+  .ApiExplainerResult .apiName {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  .ApiExplainerResult .overview {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .ApiExplainerResult section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .ApiExplainerResult .endpoint header code,
+  .ApiExplainerResult .exampleRequest,
+  .ApiExplainerResult .exampleResponse,
+  .ApiExplainerResult .errors li code {
+    font-size: 12px;
+  }
+}

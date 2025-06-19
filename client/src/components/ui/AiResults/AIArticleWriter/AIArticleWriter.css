@@ -1,0 +1,93 @@
+#AIArticleWriter {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  color: #202124;
+  line-height: 1.6;
+}
+
+.ai-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ai-title {
+  font-size: 2.125rem;
+  font-weight: 400;
+  letter-spacing: -0.0156rem;
+  color: #1a73e8;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ai-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ai-paragraph {
+  font-size: 1rem;
+  color: #5f6368;
+  text-align: justify;
+  margin: 0;
+}
+
+.ai-content a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.ai-content a:hover {
+  text-decoration: underline;
+}
+
+.ai-content ul,
+.ai-content ol {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.ai-content blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #1a73e8;
+  color: #5f6368;
+  font-style: italic;
+}
+
+#DownloadArticle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  background-color: #4285f4;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem 0;
+}
+
+@media (max-width: 600px) {
+  #AIArticleWriter {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+  .ai-title {
+    font-size: 1.75rem;
+  }
+}

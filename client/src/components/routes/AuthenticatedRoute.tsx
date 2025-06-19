@@ -10,7 +10,7 @@ export default function AuthenticatedRoute({ setAuth }: AuthPageProps) {
     <Routes>
       <Route path="/" element={<ToolsListPage setAuth={setAuth} />} />
       {ToolsList.map((tool: ToolsListItem) => (
-        <Route path={`${tool.url}`} element={<ToolsPage />} />
+        <Route path={`${tool.url}`} element={<ToolsPage setAuth={setAuth} />} />
       ))}
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>

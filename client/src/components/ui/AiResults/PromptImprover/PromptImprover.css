@@ -1,0 +1,102 @@
+#PromptImprover {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-section,
+.explanation-section {
+  margin-bottom: 1.5rem;
+}
+
+.prompt-section h2,
+.explanation-section h3 {
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.prompt-section p,
+.explanation-section p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.prompt-section {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.explanation-section {
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  #PromptImprover {
+    padding: 1.25rem;
+    max-width: 90%;
+  }
+
+  .prompt-section,
+  .explanation-section {
+    margin-bottom: 1.25rem;
+  }
+
+  .prompt-section h2,
+  .explanation-section h3 {
+    font-size: 1.25rem;
+  }
+
+  .prompt-section p,
+  .explanation-section p {
+    font-size: 0.95rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #PromptImprover {
+    padding: 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .prompt-section,
+  .explanation-section {
+    margin-bottom: 1rem;
+  }
+
+  .prompt-section h2,
+  .explanation-section h3 {
+    font-size: 1.15rem;
+  }
+
+  .prompt-section p,
+  .explanation-section p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #PromptImprover {
+    padding: 0.75rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .prompt-section,
+  .explanation-section {
+    margin-bottom: 0.75rem;
+  }
+
+  .prompt-section h2,
+  .explanation-section h3 {
+    font-size: 1rem;
+  }
+
+  .prompt-section p,
+  .explanation-section p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+}

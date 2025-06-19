@@ -9,30 +9,47 @@ import codeGenerator from "../images/code-generator.png";
 import uiImageGenerator from "../images/ui-image-generator.png";
 import articleWriter from "../images/article-writer.png";
 import promptImprover from "../images/prompt-improver.png";
-import codeTranslator from "../images/code-translator.png";
 import readmeGenerator from "../images/readme-generator.png";
+import { GenericForm } from "../components/ui/ToolsForms/GenericForm";
+import { InterviewForm } from "../components/ui/ToolsForms/InterviewForm";
+import ApiExplainerResult from "../components/ui/AiResults/ApiExplainerResult/ApiExplainerResult";
+import DatabaseDesigner from "../components/ui/AiResults/DatabaseDesigner/DatabaseDesigner";
+import DocumentationHelper from "../components/ui/AiResults/DocumentationHelper/DocumentationHelper";
+import InterviewQuestions from "../components/ui/AiResults/InterviewQuestions/InterviewQuestions";
+import CodeReviewer from "../components/ui/AiResults/CodeReviewer/CodeReviewer";
+import CodeGenerator from "../components/ui/AiResults/CodeGenerator/CodeGenerator";
+import AIArticleWriter from "../components/ui/AiResults/AIArticleWriter/AIArticleWriter";
+import PromptImprover from "../components/ui/AiResults/PromptImprover/PromptImprover";
+import AiREADMEGenerator from "../components/ui/AiResults/AiREADMEGenerator/AiREADMEGenerator";
+import UiGenerator from "../components/ui/AiResults/UiGenerator/UiGenerator";
 
 export const ToolsList: ToolsListItem[] = [
   {
     name: "API Explainer",
-    description:
-      "Get clear, concise explanations for any API endpoint or response.",
+    description: "Explain how an API works given its name.",
     image: apiExplainer,
     url: "/api-explainer",
+    placeholder: "Enter the API Name/Link here...",
+    FormComponent: GenericForm,
+    ResultComponent: ApiExplainerResult,
   },
   {
     name: "Database Designer",
-    description:
-      "Automatically generate database schema and ERDs based on your needs.",
+    description: "Automatically generate database schema based on your needs.",
     image: databaseDesigner,
     url: "/database-designer",
+    placeholder: "Describe your data model requirements (tables, fields)...",
+    FormComponent: GenericForm,
+    ResultComponent: DatabaseDesigner,
   },
   {
     name: "Documentation Helper",
-    description:
-      "Summarize and understand complex technical documentation with ease.",
+    description: "Summarize and clarify GitHub-hosted technical documentation.",
     image: documentationHelper,
     url: "/documentation-helper",
+    placeholder: "Paste the GitHub repo URL here...",
+    FormComponent: GenericForm,
+    ResultComponent: DocumentationHelper,
   },
   {
     name: "Interview Questions Generator",
@@ -40,51 +57,64 @@ export const ToolsList: ToolsListItem[] = [
       "Create role-specific interview questions and practice answers.",
     image: interviewGenerator,
     url: "/interview-questions-generator",
+    placeholder: "",
+    FormComponent: InterviewForm,
+    ResultComponent: InterviewQuestions,
   },
   {
     name: "Code Reviewer",
-    description: "Get feedback and suggestions on your code using AI.",
+    description:
+      "Analyze and explain your code snippet, offering feedback and suggestions.",
     image: codeReviewer,
     url: "/code-reviewer",
+    placeholder: "Paste your code here for review...",
+    FormComponent: GenericForm,
+    ResultComponent: CodeReviewer,
   },
   {
     name: "Code Generator",
-    description:
-      "Generate complete code snippets or full modules from natural language.",
+    description: "Generate code based on your natural-language description.",
     image: codeGenerator,
     url: "/code-generator",
+    placeholder: "Describe the functionality you need...",
+    FormComponent: GenericForm,
+    ResultComponent: CodeGenerator,
   },
   {
     name: "UI Image Generator",
-    description:
-      "Generate beautiful UI concepts and wireframes using text prompts.",
+    description: "Generate UI image from your text prompt.",
     image: uiImageGenerator,
     url: "/ui-image-generator",
+    placeholder: "Describe the UI design you want...",
+    FormComponent: GenericForm,
+    ResultComponent: UiGenerator,
   },
   {
     name: "AI Article Writer",
-    description: "Create engaging articles or blog posts in seconds using AI.",
+    description:
+      "Write articles or blog posts based on your topic description.",
     image: articleWriter,
     url: "/ai-article-writer",
+    placeholder: "Describe the article topic and key points...",
+    FormComponent: GenericForm,
+    ResultComponent: AIArticleWriter,
   },
   {
     name: "Prompt Improver",
-    description: "Improve and rewrite prompts to get better AI results",
+    description: "Refine and rewrite your prompt to get better AI results.",
     image: promptImprover,
     url: "/prompt-improver",
-  },
-  {
-    name: "Code Translator",
-    description:
-      "Translate code between different programming languages accurately.",
-    image: codeTranslator,
-    url: "/code-translator",
+    placeholder: "Paste the prompt you want to improve...",
+    FormComponent: GenericForm,
+    ResultComponent: PromptImprover,
   },
   {
     name: "AI README Generator",
-    description:
-      "Generate professional README files based on your project description.",
+    description: "Generate a professional README.",
     image: readmeGenerator,
     url: "/ai-readme-generator",
+    placeholder: "Explain about the GitHub repo here...",
+    FormComponent: GenericForm,
+    ResultComponent: AiREADMEGenerator,
   },
 ];

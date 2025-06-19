@@ -1,0 +1,162 @@
+#CodeGenerator {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 16px;
+  background-color: #ffffff;
+  color: #202124;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(60, 64, 67, 0.15),
+    0px 1px 2px rgba(60, 64, 67, 0.3);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#CopyBtn {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background-color: #1a73e8;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.15),
+    0px 2px 6px rgba(60, 64, 67, 0.3);
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
+    transform 100ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+#CopyBtn:hover {
+  background-color: #1669c1;
+  box-shadow: 0px 2px 4px rgba(60, 64, 67, 0.2),
+    0px 4px 8px rgba(60, 64, 67, 0.15);
+}
+
+#CopyBtn:active {
+  background-color: #185abc;
+  box-shadow: inset 0px 2px 4px rgba(60, 64, 67, 0.24);
+  transform: translateY(1px);
+}
+
+#CopyBtn::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 300ms ease-out, opacity 300ms ease-out;
+}
+
+#CopyBtn:focus:not(:active)::after,
+#CopyBtn:active::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 150ms ease-out, opacity 300ms ease-out;
+}
+
+#Code {
+  display: block;
+  width: 95%;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3c4043;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 transparent;
+}
+
+#Code::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+#Code::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#Code::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+#Code::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a8a8;
+}
+
+@media only screen and (max-width: 1024px) {
+  #CodeGenerator {
+    padding: 12px;
+    max-width: 90%;
+  }
+
+  #CopyBtn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  #Code {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #CodeGenerator {
+    padding: 10px;
+    margin: 16px auto;
+  }
+
+  #CopyBtn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  #Code {
+    width: 70%;
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #CodeGenerator {
+    padding: 8px;
+    margin: 12px 8px;
+  }
+
+  #CopyBtn {
+    align-self: center;
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  #Code {
+    width: 100%;
+    padding: 8px;
+    font-size: 11px;
+  }
+}
